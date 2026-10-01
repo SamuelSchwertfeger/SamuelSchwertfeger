@@ -1,83 +1,50 @@
-# Samuel Schwertfeger
+<img src="assets/banner.svg" alt="Samuel Schwertfeger — Ph.D. Student, Computer & Cyber Sciences, Augusta University" width="100%">
 
-**Ph.D. Student · Explainable AI for Intrusion Detection · U.S. Army Cyber Officer**
+<p>
+  <a href="https://www.augusta.edu/ccs/"><img src="https://img.shields.io/badge/Augusta_University-Ph.D._Student-0A1F3C" alt="Augusta University"></a>
+  <a href="mailto:sschwertfeger@augusta.edu"><img src="https://img.shields.io/badge/Email-sschwertfeger%40augusta.edu-0A1F3C" alt="Email"></a>
+</p>
 
-I am starting my Ph.D. research on explainable AI for cybersecurity: building intrusion detection systems whose alerts an analyst can understand, check, and trust.
+First-year Ph.D. student in Computer and Cyber Sciences at Augusta University and U.S. Army Cyber officer.
 
-[![Augusta University](https://img.shields.io/badge/Augusta_University-Ph.D._Student-002855)](https://www.augusta.edu/ccs/)
-[![Email](https://img.shields.io/badge/Email-sschwertfeger%40augusta.edu-555555)](mailto:sschwertfeger@augusta.edu)
-[![Reading List](https://img.shields.io/badge/Reading_List-XAI_for_Intrusion_Detection-2b6cb0)](https://github.com/SamuelSchwertfeger/xai-intrusion-detection-papers)
+## Research
 
-## About Me
+**Machine-Aware Local Language Models: Separating User Changes from Attacker Persistence on Linux**
 
-I am a first-year Ph.D. student in Computer and Cyber Sciences at Augusta University. My work sits at the intersection of cybersecurity, machine learning, and explainable AI.
+A new systemd service, cron job, or SSH key can be a routine change by the machine's owner or an attacker making sure they can get back in. Rule-based tools often flag both the same way. My research asks whether a local language model that knows the machine, including its package history and admin activity, can tell the two apart and explain its reasoning.
 
-Before my Ph.D., I earned a B.S. in Information Technology from Georgia Southern University, where I built a SIEM and IDS research lab as my capstone. I also serve as a Cyber officer in the U.S. Army National Guard.
+<img src="assets/pipeline.svg" alt="Research pipeline: Linux host, detected changes, machine-aware local LLM with machine context, classified as user change or attacker persistence" width="100%">
 
-## Research Direction
+### The problem in one table
 
-Machine learning detectors are good at flagging traffic and bad at saying why. The question driving my research is what happens between the alert and the analyst's decision.
-
-```mermaid
-flowchart LR
-    A[Network traffic] --> B[Feature extraction]
-    B --> C[ML intrusion detector]
-    C --> D{Alert}
-    D --> E["Explanation<br/>(SHAP, LIME)"]
-    E --> F[Analyst decision]
-    F -. feedback .-> C
-```
+| Mechanism | MITRE ATT&CK | Routine user change | Attacker persistence |
+|---|---|---|---|
+| Cron job | [T1053.003](https://attack.mitre.org/techniques/T1053/003/) | Nightly backup script | Reverse shell every 5 minutes |
+| systemd service | [T1543.002](https://attack.mitre.org/techniques/T1543/002/) | New web server after install | Disguised service that runs a payload at boot |
+| SSH authorized keys | [T1098.004](https://attack.mitre.org/techniques/T1098/004/) | Admin adds a laptop's key | Unknown key added to root |
+| Shell configuration | [T1546.004](https://attack.mitre.org/techniques/T1546/004/) | Alias added to `.bashrc` | Command in `.bashrc` that calls home on login |
 
 <details>
-<summary><b>The math behind a SHAP explanation</b></summary>
+<summary><b>Background: the math behind a SHAP explanation</b></summary>
 <br>
 
-SHAP assigns each input feature $i$ its Shapley value: the average change in the model's output when $i$ is added, taken over every subset $S$ of the other features $F$.
+Explaining a verdict matters as much as the verdict. SHAP, a standard baseline for explaining model decisions, assigns each input feature $i$ its Shapley value: the average change in the model's output when $i$ is added, taken over every subset $S$ of the other features $F$.
 
 ```math
 \phi_i = \sum_{S \subseteq F \setminus \{i\}} \frac{|S|!\,(|F|-|S|-1)!}{|F|!}\left[f(S \cup \{i\}) - f(S)\right]
 ```
 
-For an IDS alert, a large $\phi_i$ points the analyst to the features (packet rate, port, flag counts) that pushed the model toward "malicious".
-
 </details>
 
-## Current Focus
+## Projects
 
-- Explainable AI (XAI) for security systems
-- Machine learning-based network intrusion detection
-- Evaluating whether explanations actually help analysts
-- Detection engineering with SIEM and IDS platforms
+**[XAI for Intrusion Detection: Reading List](https://github.com/SamuelSchwertfeger/xai-intrusion-detection-papers)**
+A curated, verified list of papers on explainable AI for intrusion detection.
 
-## Research Areas
+**SIEM/IDS Detection Lab** · Georgia Southern University, advised by Dr. Hayden Wimmer
+Built a Splunk and Snort lab, ran a multi-stage attack against it, and validated detections at each stage against NIST SP 800-53.
 
-| | | |
-|---|---|---|
-| Cybersecurity | Machine Learning | Explainable AI |
-| Intrusion Detection | Network Security | Defensive Cyber Operations |
-
-## Selected Projects
-
-### [XAI for Intrusion Detection: Reading List](https://github.com/SamuelSchwertfeger/xai-intrusion-detection-papers)
-
-A curated, verified list of papers on explainable AI for network intrusion detection: foundations, surveys, applied methods, evaluation, and datasets.
-
-### SIEM/IDS Detection Lab
-
-Undergraduate research at Georgia Southern University, advised by Dr. Hayden Wimmer.
-
-<details>
-<summary><b>Lab design and results</b></summary>
-<br>
-
-- Splunk Enterprise and Snort on Ubuntu 22.04, with Windows 11 and Kali Linux hosts in VMware
-- Multi-stage attack simulation, including privilege escalation
-- Detection playbooks validated at each stage of the attack
-- Design mapped to the NIST SP 800-53 Audit and Accountability (AU) and Incident Response (IR) families
-
-</details>
-
-## Technical Stack
+## Tools
 
 | Area | Tools |
 |---|---|
@@ -88,25 +55,15 @@ Undergraduate research at Georgia Southern University, advised by Dr. Hayden Wim
 
 ## Education
 
-- **Ph.D., Computer and Cyber Sciences**, Augusta University (2026–present)
-- **B.S., Information Technology**, minor in Military Science, Georgia Southern University (2026), *magna cum laude*
-- **Cyber Security Certificate**, Georgia Southern University (2026)
-
-<details>
-<summary><b>Ask me about</b></summary>
-<br>
-
-- Building a SIEM/IDS lab from scratch
-- Writing and testing Splunk detections against simulated attacks
-- Hardening Windows Server and small networks
-- The path from Army ROTC to the Cyber branch
-
-</details>
+| Degree | Institution | Year |
+|---|---|---|
+| Ph.D., Computer and Cyber Sciences | Augusta University | 2026–present |
+| B.S., Information Technology (*magna cum laude*) | Georgia Southern University | 2026 |
+| Cyber Security Certificate | Georgia Southern University | 2026 |
 
 ## Contact
 
-- University: sschwertfeger@augusta.edu
-- Personal: schwertfeger.samuel@gmail.com
+sschwertfeger@augusta.edu
 
 ---
 

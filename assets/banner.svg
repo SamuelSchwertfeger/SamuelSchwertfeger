@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1F3C"/>
+      <stop offset="1" stop-color="#14365E"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#7FB2F0"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="m"><rect x="700" y="0" width="500" height="260" fill="url(#fade)"/></mask>
+  </defs>
+  <rect width="1200" height="260" rx="14" fill="url(#bg)"/>
+  <rect x="700" y="0" width="500" height="260" fill="url(#dots)" opacity="0.22" mask="url(#m)"/>
+  <g font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="64" y="72" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" font-size="17" fill="#7FB2F0">$ whoami</text>
+    <text x="64" y="128" font-size="52" font-weight="700" fill="#FFFFFF">Samuel Schwertfeger</text>
+    <text x="64" y="168" font-size="22" fill="#C9D6E8">Ph.D. Student · Computer &amp; Cyber Sciences · Augusta University</text>
+    <rect x="64" y="188" width="72" height="3" rx="1.5" fill="#4FA3FF"/>
+    <text x="64" y="224" font-size="19" fill="#8EC2FF">Machine-aware local language models for Linux persistence detection</text>
+  </g>
+</svg>
