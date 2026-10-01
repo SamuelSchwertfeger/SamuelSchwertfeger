@@ -1,4 +1,4 @@
-<img src="assets/banner.svg" alt="Samuel Schwertfeger, Ph.D. Student, Computer and Cyber Sciences, Augusta University" width="100%">
+<a href="https://samuelschwertfeger.github.io"><img src="assets/banner.svg" alt="Samuel Schwertfeger, Ph.D. Student, Computer and Cyber Sciences, Augusta University" width="100%"></a>
 
 <p align="center">
   <a href="https://samuelschwertfeger.github.io"><img src="https://img.shields.io/badge/Website-0A1F3C?style=for-the-badge" alt="Website"></a>
@@ -14,10 +14,10 @@ First-year Ph.D. student in Computer and Cyber Sciences at Augusta University an
 
 A new cron job, systemd service, or SSH key can be routine work by the machine's owner or an attacker making sure they can get back in. I am studying whether a local language model that knows the machine's history can tell the two apart and explain why.
 
-<picture>
+<a href="https://samuelschwertfeger.github.io/#research"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-dark.svg">
   <img src="assets/pipeline.svg" alt="Research pipeline: Linux host, detected changes, machine-aware local LLM with machine context, classified as user change or attacker persistence" width="100%">
-</picture>
+</picture></a>
 
 ## Projects
 
