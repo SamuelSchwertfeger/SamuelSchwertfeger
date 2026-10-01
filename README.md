@@ -3,6 +3,7 @@
 <p>
   <a href="https://www.augusta.edu/ccs/"><img src="https://img.shields.io/badge/Augusta_University-Ph.D._Student-0A1F3C" alt="Augusta University"></a>
   <a href="mailto:sschwertfeger@augusta.edu"><img src="https://img.shields.io/badge/Email-sschwertfeger%40augusta.edu-0A1F3C" alt="Email"></a>
+  <a href="https://samuelschwertfeger.github.io"><img src="https://img.shields.io/badge/Website-samuelschwertfeger.github.io-0A1F3C" alt="Website"></a>
 </p>
 
 First-year Ph.D. student in Computer and Cyber Sciences at Augusta University and U.S. Army Cyber officer.
