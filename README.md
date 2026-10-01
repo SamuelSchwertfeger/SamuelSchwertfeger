@@ -64,7 +64,7 @@ Built a Splunk and Snort lab, ran a multi-stage attack against it, and validated
 
 ## Contact
 
-sschwertfeger@augusta.edu
+[sschwertfeger@augusta.edu](mailto:sschwertfeger@augusta.edu) · [samuelschwertfeger.github.io](https://samuelschwertfeger.github.io) · [CV](https://samuelschwertfeger.github.io/cv/)
 
 ---
 
