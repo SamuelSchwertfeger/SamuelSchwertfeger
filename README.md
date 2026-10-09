@@ -3,6 +3,7 @@
 <p align="center">
   <a href="https://samuelschwertfeger.github.io"><img src="https://img.shields.io/badge/Website-0A1F3C?style=for-the-badge" alt="Website"></a>
   <a href="https://samuelschwertfeger.github.io/cv/"><img src="https://img.shields.io/badge/CV-0A1F3C?style=for-the-badge" alt="CV"></a>
+  <a href="https://www.linkedin.com/in/samuelschwertfeger/"><img src="https://img.shields.io/badge/LinkedIn-0A1F3C?style=for-the-badge" alt="LinkedIn"></a>
   <a href="mailto:sschwertfeger@augusta.edu"><img src="https://img.shields.io/badge/Email-0A1F3C?style=for-the-badge" alt="Email"></a>
 </p>
 
